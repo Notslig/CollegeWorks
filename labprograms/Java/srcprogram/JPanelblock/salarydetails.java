@@ -14,8 +14,10 @@ import javax.swing.JOptionPane;
           employee.display();
        }catch (NumberFormatException e) {
           JOptionPane.showMessageDialog(null, "Invalid input! Please enter a valid number for salary.", "Error", JOptionPane.ERROR_MESSAGE);
-       } catch (Exception e) {
-          JOptionPane.showMessageDialog(null, "An unexpected error occurred: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+       } catch (NullPointerException e) {
+          JOptionPane.showMessageDialog(null, "A required value was missing: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+       } catch (IllegalArgumentException e) {
+          JOptionPane.showMessageDialog(null, "Illegal argument: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
        }
     }
    class pay {
