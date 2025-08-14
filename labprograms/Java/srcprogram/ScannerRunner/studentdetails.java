@@ -1,6 +1,6 @@
 //Program to access student details name and marks in 2 subjects and find their total marks and average
 
-package CollegeStuff.labprograms.Java.srcprogram.ScannerRunner;
+package CollegeWorks.labprograms.Java.srcprogram.ScannerRunner;
 
 
 import java.util.Scanner;

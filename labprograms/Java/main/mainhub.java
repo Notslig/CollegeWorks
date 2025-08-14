@@ -1,18 +1,18 @@
-package CollegeStuff.labprograms.Java.main;
+package CollegeWorks.labprograms.Java.main;
 
 
 // Main hub to run various Java programs if using other packages
 // I have not used since its in same package
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.arithmeticswitch;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.extractionString;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.feetfinder;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.fibonnacci;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.matrixaddedsubbed;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.matrixrowsums;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.mirrorreverse;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.salarydetails;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.studentdetail;
-import CollegeStuff.labprograms.Java.srcprogram.JPanelblock.sumofproduct;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.arithmeticswitch;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.extractionString;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.feetfinder;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.fibonnacci;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.matrixaddedsubbed;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.matrixrowsums;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.mirrorreverse;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.salarydetails;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.studentdetail;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.sumofproduct;
 import java.awt.*;
 import java.util.InputMismatchException;
 import javax.swing.*;

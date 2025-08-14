@@ -1,5 +1,5 @@
 //Program to input two numbers and peform arthmetic operations using switch case 
-package CollegeStuff.labprograms.Java.srcprogram.ScannerRunner;
+package CollegeWorks.labprograms.Java.srcprogram.ScannerRunner;
 
 import java.util.Scanner;
 

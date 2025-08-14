@@ -1,8 +1,7 @@
 //Program to create a matrix of two dimensions and find sum of each row
-package CollegeStuff.labprograms.Java.srcprogram.ScannerRunner;
+package CollegeWorks.labprograms.Java.srcprogram.ScannerRunner;
 
 import java.util.Scanner;
-import java.lang.System;
 
 public class matrixrowsum {
     public void matrixrow() {

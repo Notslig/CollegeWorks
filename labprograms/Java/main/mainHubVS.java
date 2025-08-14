@@ -1,24 +1,20 @@
-package CollegeStuff.labprograms.Java.main;
+package CollegeWorks.labprograms.Java.main;
 
 
 // Main hub to run various Java programs if using other packages
 // I have not used since its in same package
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.studentdetails;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.substringfunc;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.sumofproducts;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.matrixrowsum;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.mirrorinverse;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.numericswitch;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.fibonnaccinum;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.matrixaddsub;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.salarycheck;
-import CollegeStuff.labprograms.Java.srcprogram.ScannerRunner.distancefeet;
-
-
-import java.lang.System;
-import java.lang.Exception;
-import java.util.Scanner;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.distancefeet;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.fibonnaccinum;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.matrixaddsub;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.matrixrowsum;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.mirrorinverse;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.numericswitch;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.salarycheck;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.studentdetails;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.substringfunc;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.sumofproducts;
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 
 public class mainHubVS {
@@ -40,58 +36,57 @@ public class mainHubVS {
             System.out.print("Fetch the program using the number: ");
             option = input.nextInt();
             switch (option) {
-                case 1:
+                case 1 -> {
                     System.out.println("Program to access student details name and marks in 2 subjects and find their total marks, average and grade them accordingly");
                     studentdetails student = new studentdetails();
                     student.studentinfo();
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("Program to read two inputs having same digits and multiplying each inputs digit with other and find their SOP");
                     sumofproducts sop = new sumofproducts();
                     sop.sop();
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println("Program to create a matrix of two dimensions and find sum of each row");
                     matrixrowsum twodim = new matrixrowsum();
                     twodim.matrixrow();
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("Program to check whether the array is a mirror inverse ");
                     mirrorinverse flip = new mirrorinverse();
                     flip.mirrorreverse();
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     System.out.println("Program to input two numbers and peform arthmetic operations using switch case ");
                     numericswitch maths = new numericswitch();
                     maths.arithmeticswitch();
-                    break;
-                case 6:
+                }
+                case 6 -> {
                     System.out.println("Program to find Fibonnacci number by inputting the range from start till end using java ");
                     fibonnaccinum fibonnacci = new fibonnaccinum();
                     fibonnacci.fibonnacii();
-                    break;
-                case 7:
+                }
+                case 7 -> {
                     System.out.println("Program to add and subtract two matrices of same dimensions");
                     matrixaddsub matrix = new matrixaddsub();
                     matrix.matrixaddingsubing();
-                    break;
-                case 8:
+                }
+                case 8 -> {
                     System.out.println("Program to check salary of employee and calculate PF, DA, HRA, Gross and Net Salary");
                     salarycheck salary = new salarycheck(); 
                     salary.employeeSalaryCheck();
-                    break;
-                case 9:
+                }
+                case 9 -> {
                     System.out.println("Program to extract String elements ");
                     substringfunc extract = new substringfunc();
                     extract.ExtractString();
-                    break;
-                case 10:
+                }
+                case 10 -> {
                     System.out.println("Program to find distance in feet and inches");
                     distancefeet feet = new distancefeet();
                     feet.feetfinder();
-                    break;
-                default:
-                    System.out.println("Not in my .$directory please take that L and cope");
+                }
+                default -> System.out.println("Not in my .$directory please take that L and cope");
             }
         } catch (InputMismatchException e) {
             System.out.println("Please enter a valid number.");

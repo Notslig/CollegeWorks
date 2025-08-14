@@ -1,5 +1,5 @@
 // Program to read two inputs having same digits and multiplying each inputs digit with other and find their SOP
-package CollegeStuff.labprograms.Java.srcprogram.ScannerRunner;
+package CollegeWorks.labprograms.Java.srcprogram.ScannerRunner;
 
 import java.util.Scanner;
 

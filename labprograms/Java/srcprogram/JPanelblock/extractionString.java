@@ -1,4 +1,4 @@
-package CollegeStuff.labprograms.Java.srcprogram.JPanelblock;
+package CollegeWorks.labprograms.Java.srcprogram.JPanelblock;
 
 
 import javax.swing.JOptionPane;

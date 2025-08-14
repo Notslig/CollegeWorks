@@ -1,5 +1,5 @@
 // Program to find Fibonnacci number by inputting the range from start till end using java 
-package CollegeStuff.labprograms.Java.srcprogram.ScannerRunner;
+package CollegeWorks.labprograms.Java.srcprogram.ScannerRunner;
 
 import java.util.Scanner;
 

@@ -1,5 +1,5 @@
 //Program to check whether the array is a mirror inverse 
-package CollegeStuff.labprograms.Java.srcprogram.ScannerRunner;
+package CollegeWorks.labprograms.Java.srcprogram.ScannerRunner;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
