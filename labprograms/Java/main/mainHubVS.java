@@ -3,6 +3,7 @@ package CollegeWorks.labprograms.Java.main;
 
 // Main hub to run various Java programs if using other packages
 // I have not used since its in same package
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.EmployeeManagerSalary;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.distancefeet;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.fibonnaccinum;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.matrixaddsub;
@@ -19,6 +20,28 @@ import java.util.Scanner;
 
 public class mainHubVS {
      public static void main(String[] args) throws Exception {
+        int menuOption;
+        Scanner menu = new Scanner(System.in);
+
+       System.out.println("Welcome to Program generator (of our year) \n There are programs available based on Index of the subject \n Select Part A as option 1 and Part B as option 2");
+       System.out.println("Enter the option: ");
+        try {
+            menuOption = menu.nextInt();
+            if (menuOption == 1) {
+                partA();
+            } else if (menuOption == 2) {
+                partB();
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Number you've called is not answering please try again later  ");
+        } finally {
+            menu.close();
+            System.out.println("Thank you for using the Notslig$directory!");
+        System.exit(0);   
+        }        
+  }
+
+static void partA () {
         int option;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your desired program :");
@@ -93,7 +116,29 @@ public class mainHubVS {
         } finally {
             input.close();
         }
-        System.out.println("Thank you for using the Notslig$directory!");
-        System.exit(0);   
-  }
+    }
+
+static void partB () {
+        int option;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your desired program :");
+        System.out.println("1: Employee and Manager Salary Details");
+        
+        try {
+            System.out.print("Fetch the program using the number: ");
+            option = input.nextInt();
+            switch (option) {
+                case 1 -> {
+                    System.out.println("Program to display employee and manager details with salary, age, place, phone number and specializations/department");
+                    EmployeeManagerSalary emp = new EmployeeManagerSalary();
+                    emp.EmployeeManagerPay();
+                }
+                default -> System.out.println("Not in my .$directory please take that L and cope");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println("Please enter a valid number.");
+        } finally {
+            input.close();
+        }
+    }
 }
