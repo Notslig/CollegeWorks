@@ -1,8 +1,8 @@
 package CollegeWorks.labprograms.Java.main;
 
 
-// Main hub to run various Java programs if using other packages
-// I have not used since its in same package
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.EmployeeManagerInheritance;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.StudentResultInheritance;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.arithmeticswitch;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.extractionString;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.feetfinder;
@@ -35,8 +35,28 @@ public class mainhub {
 
         windowscreen.setVisible(true);
         
+        JOptionPane.showMessageDialog(windowscreen, "Welcome to Program generator (of our year) \n There are programs available based on two parts as per syllabus index \n\n" +
+                "Part A: Contains various programs related to student details, matrix operations, arithmetic operations, and more.\n" +
+                "Part B: Contains programs related to inheritance and polymorphism.\n\n"); 
+        int menuOption = Integer.parseInt(JOptionPane.showInputDialog(windowscreen, "Enter the option:"));
+         
 
-  String input = JOptionPane.showInputDialog(
+         switch (menuOption) {
+             case 1 -> partA(windowscreen);
+             case 2 -> partB(windowscreen);
+             default -> {
+                 JOptionPane.showMessageDialog(windowscreen, "End of list");
+                 System.exit(0);
+             }
+         }
+   
+  }
+
+
+static void partA(JFrame windowscreen) {
+        JOptionPane.showMessageDialog(windowscreen, "Welcome to Part A of the program generator");
+        JOptionPane.showMessageDialog(windowscreen, "Here you can run various programs related to student details, matrix operations, arithmetic operations, and more.");
+       String input = JOptionPane.showInputDialog(
             windowscreen,
             """
             Enter a number to choose your program:
@@ -117,7 +137,63 @@ public class mainhub {
             JOptionPane.showMessageDialog(windowscreen, "Thank you for using the Notslig$directory!");
         System.exit(0); 
         }
+     }
 
-          
+static void partB(JFrame windowscreen) {
+        String input = JOptionPane.showInputDialog(
+            windowscreen,
+            """
+            Enter a number to choose your program:
+            1: Employee and Manager Details (inherited)
+            2: Student Result Details (inherited)
+            3: 
+            4: 
+            5: 
+            6: 
+            7: 
+            8: 
+            9: 
+            10: 
+            """,
+            "Select Program",
+            JOptionPane.QUESTION_MESSAGE
+        );
+
+        if (input == null || input.isEmpty()) {
+            JOptionPane.showMessageDialog(windowscreen, "Bye kurwa perdoyle");
+            System.exit(0);
+        }
+
+        try {
+             JOptionPane.showMessageDialog(windowscreen, "Running the program request");
+            int option = Integer.parseInt(input);
+            switch (option) {
+                case 1 -> {
+                    JOptionPane.showMessageDialog(windowscreen, "Program to access employee and manager details using inheritance");
+                    EmployeeManagerInheritance empManager = new EmployeeManagerInheritance();
+                    empManager.EmployeeManagerDetails();
+                }
+                case 2 -> {
+                    JOptionPane.showMessageDialog(windowscreen, "Program to access student result details using inheritance");
+                    StudentResultInheritance studentResult = new StudentResultInheritance();
+                    studentResult.StudentResult();
+                }
+                // Add more cases as needed
+                default -> {
+                    JOptionPane.showMessageDialog(windowscreen, "Not in my .$directory — please take that L and cope ");
+                }
+            }
+    } catch (InputMismatchException e) {
+           JOptionPane.showMessageDialog(windowscreen, "Dude pick from above");
+    } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(windowscreen, "it says number not skibidi");
+    } catch (NullPointerException | IllegalArgumentException e) {
+            JOptionPane.showMessageDialog(windowscreen, "man im deeeaaadddd" + e.getMessage());
+    } finally {
+        JOptionPane.showMessageDialog(windowscreen, "Thank you for using the Notslig$directory!");
+        System.exit(0); 
+    }
   }
+
+
 }
