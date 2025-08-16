@@ -4,6 +4,7 @@ package CollegeWorks.labprograms.Java.main;
 // Main hub to run various Java programs if using other packages
 // I have not used since its in same package
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.EmployeeManagerSalary;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.StudentDetailsInherited;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.distancefeet;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.fibonnaccinum;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.matrixaddsub;
@@ -132,6 +133,11 @@ static void partB () {
                     System.out.println("Program to display employee and manager details with salary, age, place, phone number and specializations/department");
                     EmployeeManagerSalary emp = new EmployeeManagerSalary();
                     emp.EmployeeManagerPay();
+                }
+                case 2 -> {
+                    System.out.println("Program to display student marks using inheritance ");
+                    StudentDetailsInherited student = new StudentDetailsInherited();
+                    student.StudentInherited();
                 }
                 default -> System.out.println("Not in my .$directory please take that L and cope");
             }
