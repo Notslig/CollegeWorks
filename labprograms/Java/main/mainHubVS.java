@@ -5,6 +5,7 @@ package CollegeWorks.labprograms.Java.main;
 // I have not used since its in same package
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.EmployeeManagerSalary;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.StudentDetailsInherited;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.abstractShape;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.distancefeet;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.fibonnaccinum;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.matrixaddsub;
@@ -138,6 +139,11 @@ static void partB () {
                     System.out.println("Program to display student marks using inheritance ");
                     StudentDetailsInherited student = new StudentDetailsInherited();
                     student.StudentInherited();
+                }
+                case 3 -> {
+                    System.out.println("Program to create various shapes and find their areas using abstract class");
+                    abstractShape shape = new abstractShape();
+                    shape.CreateShape();
                 }
                 default -> System.out.println("Not in my .$directory please take that L and cope");
             }

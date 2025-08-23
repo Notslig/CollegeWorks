@@ -30,7 +30,7 @@ import java.util.Scanner;
 
         public class salarycheck { 
      public void employeeSalaryCheck() {
-            Scanner in = new Scanner(System.in);
+            try (Scanner in = new Scanner(System.in)) {
             System.out.print("Enter your name: ");
             String name = in.nextLine();
             System.out.print("Enter your salary: ");
@@ -39,6 +39,9 @@ import java.util.Scanner;
             pay employee = new pay(name, salary);
             employee.calculate();
             employee.display();
+
+            in.close();
         }
+     }
 }
   

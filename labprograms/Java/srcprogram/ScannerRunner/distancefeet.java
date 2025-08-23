@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class distancefeet {
    public void  feetfinder(){
-       Scanner in = new Scanner(System.in);
+
+    try (Scanner in = new Scanner(System.in)) {
 
          System.out.println("Enter the distance in feet and inches:");
          int feet1 = in.nextInt();
@@ -16,7 +17,10 @@ public class distancefeet {
          feetpix ft2 = new feetpix(feet2, inches2);
 
          feetpix result = new feetpix();
-          result.sum(ft1, ft2);
+         result.sum(ft1, ft2);
+        } catch (Exception e) {
+            System.out.println("Invalid input. Please enter integers for feet and inches.");
+        }
     }
       class feetpix { 
        int feet;

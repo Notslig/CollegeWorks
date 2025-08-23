@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class matrixaddsub {
  public  void matrixaddingsubing() { 
-     Scanner in=new Scanner(System.in);
+    try (Scanner in=new Scanner(System.in)){
+     
      System.out.println("Enter the number of rows for first matrix:");
      int r = in.nextInt();
      System.out.println("Enter the number of columns for first matrix:");
@@ -60,6 +61,9 @@ public class matrixaddsub {
             }
             System.out.println();
         }
+        in.close();
+
+    }
 
 
  }

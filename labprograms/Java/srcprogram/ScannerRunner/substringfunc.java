@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class substringfunc {
     public void  ExtractString() {
-        Scanner in = new Scanner(System.in);
+        try (Scanner in = new Scanner(System.in)) {
+        
         System.out.print("Enter a string: ");
         String str = in.nextLine();
         System.out.println("Enter the Extraction point and length of the string");
@@ -13,5 +14,6 @@ public class substringfunc {
         System.out.println("Extracted String:" + str.substring( start - 1, start + (end -1)));
 
      }
+    }
     
 }
