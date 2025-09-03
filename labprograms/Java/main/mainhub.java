@@ -3,7 +3,9 @@ package CollegeWorks.labprograms.Java.main;
 
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.EmployeeManagerInheritance;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.StudentResultInheritance;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.abstractShapes;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.arithmeticswitch;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.bankInterface;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.extractionString;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.feetfinder;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.fibonnacci;
@@ -13,6 +15,7 @@ import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.mirrorreverse;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.salarydetails;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.studentdetail;
 import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.sumofproduct;
+import CollegeWorks.labprograms.Java.srcprogram.JPanelblock.temperatureConverter;
 import java.awt.*;
 import java.util.InputMismatchException;
 import javax.swing.*;
@@ -35,9 +38,14 @@ public class mainhub {
 
         windowscreen.setVisible(true);
         
-        JOptionPane.showMessageDialog(windowscreen, "Welcome to Program generator (of our year) \n There are programs available based on two parts as per syllabus index \n\n" +
-                "Part A: Contains various programs related to student details, matrix operations, arithmetic operations, and more.\n" +
-                "Part B: Contains programs related to inheritance and polymorphism.\n\n"); 
+        JOptionPane.showMessageDialog(windowscreen, """
+            Welcome to Program generator (of our year)
+            There are programs available based on two parts as per syllabus index
+
+            Part A: Contains various programs related to student details, matrix operations, arithmetic operations, and more.
+            Part B: Contains programs related to inheritance and polymorphism.
+
+            """);
         int menuOption = Integer.parseInt(JOptionPane.showInputDialog(windowscreen, "Enter the option:"));
          
 
@@ -146,11 +154,11 @@ static void partB(JFrame windowscreen) {
             Enter a number to choose your program:
             1: Employee and Manager Details (inherited)
             2: Student Result Details (inherited)
-            3: 
-            4: 
-            5: 
-            6: 
-            7: 
+            3: Banking transactions using interface
+            4: Abstarct class shapes and areas
+            5: Converting Celsius to Fahrenheit and vice versa (package)
+            6: Exception Handling using exception class
+            7: Using multi threading to genrate random numbers 
             8: 
             9: 
             10: 
@@ -177,6 +185,26 @@ static void partB(JFrame windowscreen) {
                     JOptionPane.showMessageDialog(windowscreen, "Program to access student result details using inheritance");
                     StudentResultInheritance studentResult = new StudentResultInheritance();
                     studentResult.StudentResult();
+                }
+                case 3 -> {
+                    JOptionPane.showMessageDialog(windowscreen, "Program to perform banking transactions using interface");
+                    bankInterface bank = new bankInterface();
+                    bank.performTransactions();
+                }
+                case 4 -> {
+                    JOptionPane.showMessageDialog(windowscreen, "Program to calculate areas of different shapes using abstract classes");
+                    abstractShapes shapes = new abstractShapes();
+                    shapes.CreateShape();
+                }
+                case 5 -> {
+                    JOptionPane.showMessageDialog(windowscreen, "Program to convert Celsius to Fahrenheit and vice versa using package");
+                    temperatureConverter converter = new temperatureConverter();
+                    converter.convertTemperatureAndSI();
+                }
+                case 6 ->{
+                    JOptionPane.showMessageDialog(windowscreen,"Program to throw exception using exception class");
+                    exceptionHandling eh = new exceptionHandling();
+                    eh.throwException();
                 }
                 // Add more cases as needed
                 default -> {

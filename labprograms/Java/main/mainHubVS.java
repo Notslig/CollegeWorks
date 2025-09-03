@@ -3,21 +3,26 @@ package CollegeWorks.labprograms.Java.main;
 
 // Main hub to run various Java programs if using other packages
 // I have not used since its in same package
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.EmployeeManagerSalary;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.StudentDetailsInherited;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.abstractShape;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.bankInterface;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.distancefeet;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.exceptionHandler;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.fibonnaccinum;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.matrixaddsub;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.matrixrowsum;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.mirrorinverse;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.multiThreading;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.numericswitch;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.salarycheck;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.studentdetails;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.substringfunc;
 import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.sumofproducts;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import CollegeWorks.labprograms.Java.srcprogram.ScannerRunner.temperatureAndSimpleInterest;
 
 
 public class mainHubVS {
@@ -35,7 +40,7 @@ public class mainHubVS {
                 partB();
             }
         } catch (InputMismatchException e) {
-            System.out.println("Number you've called is not answering please try again later  ");
+            System.out.println("The number you've called is not answering please try again later  ");
         } finally {
             menu.close();
             System.out.println("Thank you for using the Notslig$directory!");
@@ -55,7 +60,8 @@ static void partA () {
         System.out.println("6: Fibonacci Number");
         System.out.println("7: Matrix addition and subtraction");
         System.out.println("8: Salary Check of Employee");
-        System.out.println("9: Distance in Feet and Inches");
+        System.out.println("9: Extraction of characters from String");
+        System.out.println("10: Distance in feet and inches");
         
         try {
             System.out.print("Fetch the program using the number: ");
@@ -124,7 +130,13 @@ static void partB () {
         int option;
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your desired program :");
-        System.out.println("1: Employee and Manager Salary Details");
+        System.out.println("1: Employee and Manager Salary Details(inherited)");
+        System.out.println("2: Student Result Details(inherited)");
+        System.out.println("3: Bank transaction using interfaces");
+        System.out.println("4: Abstract Shape Area Calculator(abstract class)");
+        System.out.println("5: Converting Celsius to Fahrenheit and vice versa using packages");
+        System.out.println("6: Exception class using try catch ");
+        System.out.println("7: MultiThreading using random class to generate area of shape ");
         
         try {
             System.out.print("Fetch the program using the number: ");
@@ -141,9 +153,30 @@ static void partB () {
                     student.StudentInherited();
                 }
                 case 3 -> {
+                    System.out.println("Program to maintain bank balance using interface and perform transactions");
+                    bankInterface bank = new bankInterface();
+                    bank.interfaceBank();
+                }
+                case 4 -> {
                     System.out.println("Program to create various shapes and find their areas using abstract class");
                     abstractShape shape = new abstractShape();
                     shape.CreateShape();
+                }
+                case 5 -> {
+                    System.out.println("Program to convert temperature from Celsius to Fahrenheit and vice versa using packages");
+                    temperatureAndSimpleInterest temp = new temperatureAndSimpleInterest();
+                    temp.packageTempAndSI();
+
+                }
+                case 6 -> {
+                    System.out.println("Program to generate Exceptions using Try and catch");
+                    exceptionHandler eh = new exceptionHandler();
+                    eh.exceptionHandling();
+                }
+                case 7 ->{
+                    System.out.println("Program to generate area of shape randomly using Threading ");
+                    multiThreading  multiThread = new multiThreading();
+                    multiThread.Threading();
                 }
                 default -> System.out.println("Not in my .$directory please take that L and cope");
             }

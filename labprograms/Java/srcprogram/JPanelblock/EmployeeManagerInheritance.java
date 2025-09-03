@@ -37,14 +37,15 @@ class EmployeeDetails extends Employee {
     String Specializations;
 
     void display() {
-        String display =
-        "FIELDNAME             | VALUE"+"\n"+
-        "Name:            |" + Name+"\n"+
-        "Salary:          |" + Salary+"\n"+
-        "Age:             |" + Age+"\n"+
-        "Place:           |" + Place+"\n"+
-        "Phone Number:    |" + PNO+"\n"+
-        "Specializations: |" + Specializations+"\n";
+        String display = """
+        FIELDNAME             | VALUE
+        Name:                 |%s
+        Salary:               |%s
+        Age:                  |%d
+        Place:                |%s
+        Phone Number:         |%s
+        Specializations:      |%s
+        """.formatted(Name, Salary, Age, Place, PNO, Specializations);
 
         JOptionPane.showMessageDialog(null, display);
     }
@@ -52,14 +53,15 @@ class EmployeeDetails extends Employee {
 class ManagerDetails extends Employee {
     String Department;
     void display() {
-        String display =
-        "FIELDNAME             | VALUE"+"\n"+
-        "Name:            |" + Name+"\n"+
-        "Salary:          |" + Salary+"\n"+
-        "Age:             |" + Age+"\n"+
-        "Place:           |" + Place+"\n"+
-        "Phone Number:    |" + PNO+"\n"+
-        "Department:      |" + Department+"\n";
+        String display = """
+        FIELDNAME             | VALUE
+        Name:                 |%s
+        Salary:               |%s
+        Age:                  |%d
+        Place:                |%s
+        Phone Number:         |%s
+        Department:           |%s
+        """.formatted(Name, Salary, Age, Place, PNO, Department);
 
         JOptionPane.showMessageDialog(null, display);
     }

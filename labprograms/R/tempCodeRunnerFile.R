@@ -1,5 +1,1 @@
-maritalstatus <- factor(c("Married", "Single", "Divorce"))
-print(maritalstatus)
-check = is.factor(maritalstatus)
-print(check)
-maritalstatus[c(2,4)]
+ choice <- as.integer(readline(prompt = "Enter among the  choice
